@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 230</title>
+    <style>
+        h1, div {
+            padding-left: 58px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Question 230</h1>
+    <xmp>
+        Which CSS3 code fragment styles an H2 element only if it is a direct child of a DIV element?
+
+        A. h2 > div {background-color: #900;}
+        B. div, h2 {background-color: #900;}
+        C. div {background-color: #900;}h2 {background-color: #900;}
+        D. div > h2 {background-color: #900;}
+    </xmp>
+    <div><h2>COMPROBACIÓN (Esto es un h2 dentro de un div)</h2></div>
+    <div>Esto es otro div con los botones: 
+        <button onclick=demoA()>Opción A</button>
+        <button onclick=demoB()>Opción B</button>
+        <button onclick=demoC()>Opción C</button>
+        <button onclick=demoD()>Opción D</button>
+    </div>
+    <script>
+        function demoA(){
+            var name = "h2 > div";
+            var rules = "background-color: #900";
+            var style = document.createElement('style');
+            style.type = 'text/css';
+            document.getElementsByTagName('head')[0].appendChild(style);
+            style.sheet.insertRule(name+"{"+rules+"}",0);
+        }
+        function demoB(){
+            var name = "div, h2";
+            var rules = "background-color: #900";
+            var style = document.createElement('style');
+            style.type = 'text/css';
+            document.getElementsByTagName('head')[0].appendChild(style);
+            style.sheet.insertRule(name+"{"+rules+"}",0);
+        }
+        function demoC(){
+            var name = "div";
+            var rules = "background-color: #900";
+            var style = document.createElement('style');
+            style.type = 'text/css';
+            document.getElementsByTagName('head')[0].appendChild(style);
+            style.sheet.insertRule(name+"{"+rules+"}",0);
+            var name = "h2";
+            var rules = "background-color: #900";
+            style.sheet.insertRule(name+"{"+rules+"}",0);
+        }function demoD(){
+            var name = "div > h2";
+            var rules = "background-color: #900";
+            var style = document.createElement('style');
+            style.type = 'text/css';
+            document.getElementsByTagName('head')[0].appendChild(style);
+            style.sheet.insertRule(name+"{"+rules+"}",0);
+        }
+    </script>
+
+    <xmp>
+        ******************
+        Correct Answer: D
+        ******************
+        Explanation:
+        https://www.w3.org/TR/CSS21/selector.html%23id-selectors
+
+    </xmp>
+</body>
+
+</html>

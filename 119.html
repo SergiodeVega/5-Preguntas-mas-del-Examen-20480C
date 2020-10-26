@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 119</title>
+    <style>
+        #span1 {
+
+            color: red;
+        }
+
+        #span2 {
+
+            top: 200px;
+            left: -100px;
+            height: 130px;
+            width: 130px;
+            color: green;
+        }
+
+        h1,
+        h3,
+        .indentar,
+        img {
+            padding-left: 58px;
+        }
+
+        #contenedor {
+            background-color: #ffffff;
+            border: 1px solid #c3c3c3;
+            height: 250px;
+            width: 200px;
+            overflow: hidden;
+            margin: 0 auto;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Question 119</h1>
+    <xmp>
+        HOTSPOT
+        You develop a webpage.
+        The layout of the webpage must resemble the following image:
+        You need to ensure that the page renders properly.
+    </xmp>
+    <img src="119a.jpg"> </b>
+    <div class="indentar"><b>How should you complete the relevant CSS styles?</b></div>
+    <xmp>
+        To answer, select the appropriate options in the answer area.
+        NOTE: Each correct selection is worth one point.
+    </xmp>
+    <img src="119b.jpg">
+
+    <h3>DEMOSTRACIÓN</h3>
+    <div id="contenedor" class="indentar">
+        <p>
+            Start of main contents.
+            <span id=span1> Start of span1 contents.
+                <span id=span2> Span2 contents.</span>
+                End of span 1 Contents.</span>
+            End of main body contents.
+        </p>
+    </div>
+    </b>
+    </b>
+    <div class="indentar"> SPAN1:
+        <button onclick=functionSpan1A()>z-index: 1</button>
+        <button onclick=functionSpan1B()>float: left</button>
+        <button onclick=functionSpan1C()>position: relative</button>
+        <button onclick=functionSpan1D()>position: absolute</button>
+    </div>
+    <script>
+        function functionSpan1A() {
+            document.getElementById("span1").style.zIndex = "1";
+        }
+        function functionSpan1B() {
+            document.getElementById("span1").style.float = "left";
+        }
+        function functionSpan1C() {
+            document.getElementById("span1").style.position = "relative";
+        }
+        function functionSpan1D() {
+            document.getElementById("span1").style.position = "absolute";
+        }
+    </script>
+
+    <div class="indentar"> SPAN2:
+        <button onclick=functionSpan2A()>z-index: 2</button>
+        <button onclick=functionSpan2B()>float: right</button>
+        <button onclick=functionSpan2C()>position: relative</button>
+        <button onclick=functionSpan2D()>position: absolute</button>
+    </div>
+    <script>
+        function functionSpan2A() {
+            document.getElementById("span2").style.zIndex = "2";
+        }
+        function functionSpan2B() {
+            document.getElementById("span2").style.float = "right";
+        }
+        function functionSpan2C() {
+            document.getElementById("span2").style.position = "relative";
+        }
+        function functionSpan2D() {
+            document.getElementById("span2").style.position = "absolute";
+        }
+    </script>
+
+    <xmp>
+        ***********************
+        Correct Answer:
+        1. position: relative
+        2. position: absolute
+        ***********************
+
+        Section: Volume C
+        Explanation
+        * position: relative
+        The element is positioned relative to its normal position, so "left:20" adds 20 pixels to the element's LEFT
+        position
+        * position: absolute
+        The element is positioned relative to its first positioned (not static) ancestor element
+
+        Reference: https://www.w3schools.com/cssref/pr_class_position.asp
+
+    </xmp>
+
+</body>
+
+</html>

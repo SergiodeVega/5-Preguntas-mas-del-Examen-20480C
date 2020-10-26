@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 94</title>
+    <style>
+        h1,
+        div,
+        img,
+        table {
+            padding-left: 58px;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+
+<body>
+    <h1>Question 94</h1>
+    <xmp>
+        DRAG DROP
+        You create an HTML5 webpage. You have the following HTML markup:
+
+        <table id="fruitTable">
+            <tr>
+                <th>Fruit</th>
+                <th>Inventory</th>
+            </tr>
+        </table>
+
+        You also have the following JavaScript code segment:
+
+        var jsonFruit = { "apples" : "12", "bananas" : "8", "watermelon" : "3" }
+
+        You need to add additional rows to the fruitTable element by processing the jsonFruit values in the order
+        listed.
+    </xmp>
+    <div><b>Which three code blocks should you use to develop the solution?</b></div>
+    <xmp>
+        To answer, move the appropriate code blocks from the list of
+        code blocks to the answer area and arrange them in the correct order.
+
+        NOTE: Each correct selection is worth one point.
+    </xmp>
+    <img src="94.jpg">
+    <xmp>
+        ***********************************************
+        Correct Answer: D, G, E
+    </xmp>
+    <div style="color:red">POSIBLE ERRATA. Parece que en el segundo bloque faltan un "(" y "+"</div>>
+    <xmp>
+        D:  $.each(jsonFruit, function (key, val){
+
+        G:  $("#fruitTable").append($"<tr><td>" + key
+                "</td><td>" + val +
+                "</td></tr>"));
+
+        E:  });
+        ***********************************************
+    </xmp>
+    <div><b>DEMOSTRACIÓN</b></div>
+    <table id="fruitTable">
+        <tr>
+            <th>Fruit</th>
+            <th>Inventory</th>
+        </tr>
+    </table>
+    <div>
+        <button onclick="functionDemo()">Test</button>
+    </div>
+    <script>
+        var jsonFruit = { "apples": "12", "bananas": "8", "watermelon": "3" }
+        function functionDemo() {
+            
+            $.each(jsonFruit, function(key, val) {
+
+                $("#fruitTable").append($("<tr><td>" + key + "</td><td>" + val + "</td></tr>"));
+                
+
+            });
+        }
+    </script>
+    <xmp>
+        Section: Volume B
+        Explanation:
+        The appendTo() method inserts HTML elements at the end of the selected elements.
+        example to loop over a JavaScript array object.
+
+        var json = [
+        {"id":"1","tagName":"apple"},
+        {"id":"2","tagName":"orange"},
+        {"id":"3","tagName":"banana"},
+        {"id":"4","tagName":"watermelon"},
+        {"id":"5","tagName":"pineapple"}
+        ];
+
+        $.each(json, function(idx, obj) {
+        alert(obj.tagName);
+        });
+
+        Reference:
+        https://www.w3schools.com/jquery/html_appendto.asp
+        https://www.mkyong.com/jquery/jquery-loop-over-json-string-each-example/
+    </xmp>
+
+</body>
+
+</html>
